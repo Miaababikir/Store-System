@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1373.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.InventoryController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #000000; -fx-border-width: 2;" BorderPane.alignment="CENTER">
+         <items>
+            <JFXButton fx:id="home" buttonType="RAISED" style="-fx-background-color: #0000000;" text="Home" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="admin" buttonType="RAISED" style="-fx-background-color: #0000000;" text="Admin" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/admin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="settings" buttonType="RAISED" style="-fx-background-color: #0000000;" text="Settings" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/settings2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="186.0" layoutY="10.0" style="-fx-background-color: #0000000;" text="Refresh" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/reload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </items>
+      </ToolBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="1443.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="1494.0" style="-fx-background-color: #e0e0e0;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/pad.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fill="#4a4848" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation Control">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <TabPane layoutY="64.0" prefHeight="598.0" prefWidth="1494.0" stylesheets="@../Css/TabPan.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Tickets">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="992.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="267.0" layoutY="99.0" prefHeight="847.0" prefWidth="1494.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane prefHeight="100.0" prefWidth="650.0">
+                                             <children>
+                                                <TextField fx:id="searchByID" alignment="CENTER_RIGHT" layoutX="247.0" layoutY="14.0" onAction="#searchByID" prefHeight="25.0" prefWidth="157.0" promptText="Search by ID" style="-fx-alignment: CENTER-RIGHT;" stylesheets="@../Css/TextField.css" />
+                                                <TextField fx:id="searchByName" alignment="CENTER_RIGHT" layoutX="247.0" layoutY="61.0" onAction="#searchByName" prefHeight="25.0" prefWidth="157.0" promptText="Search by name" style="-fx-alignment: CENTER-RIGHT;" stylesheets="@../Css/TextField.css" />
+                                             </children>
+                                          </Pane>
+                                       </children></HBox>
+                                    <TableView fx:id="table" prefHeight="460.0" prefWidth="1491.0">
+                                       <columns>
+                                          <TableColumn fx:id="dateCol" prefWidth="90.0" text="ID" />
+                                          <TableColumn fx:id="unitPrice" prefWidth="172.0" text="Customer" />
+                                          <TableColumn fx:id="material" prefWidth="167.0" text="Price" />
+                                          <TableColumn fx:id="id" prefWidth="939.0" text="Date" />
+                                       </columns>
+                                       <stylesheets>
+                                          <URL value="@../Css/Table.css" />
+                                          <URL value="@../Css/test.css" />
+                                       </stylesheets>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/inventory.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+                <Tab text="Operation">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1485.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#4a4848" layoutX="648.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD and Update">
+                                 <font>
+                                    <Font name="Bookman Old Style Bold" size="21.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="465.0" layoutY="72.0" prefHeight="376.0" prefWidth="565.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="376.0" prefWidth="276.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+                                             <VBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXDatePicker fx:id="date" defaultColor="#7a8083" maxWidth="250.0">
+                                             <VBox.margin>
+                                                <Insets left="15.0" top="5.0" />
+                                             </VBox.margin>
+                                          </JFXDatePicker>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="376.0" prefWidth="288.0">
+                                       <children>
+                                          <TextField fx:id="idText" alignment="CENTER_LEFT" onAction="#getData" prefHeight="33.0" prefWidth="232.0" promptText="ID" style="-fx-alignment: CENTER-RIGHT;" stylesheets="@../Css/MainStyle.css">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="170.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer :">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <TextField fx:id="materialName" alignment="CENTER_LEFT" style="-fx-alignment: CENTER-LEFT;" stylesheets="@../Css/MainStyle.css">
+                                             <VBox.margin>
+                                                <Insets left="15.0" right="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price :">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <TextField fx:id="unitPriceField" alignment="CENTER_LEFT" style="-fx-alignment: CENTER-LEFT;" stylesheets="@../Css/MainStyle.css">
+                                             <VBox.margin>
+                                                <Insets left="15.0" right="20.0" top="5.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="570.0" layoutY="464.0" prefHeight="103.0" prefWidth="355.0">
+                                 <children>
+                                    <JFXButton fx:id="add" buttonType="RAISED" onAction="#addData" prefHeight="50.0" prefWidth="100.0" styleClass="add" stylesheets="@../Css/Buttons.css" text="ADD" />
+                                    <JFXButton fx:id="update" buttonType="RAISED" onAction="#updateData" prefHeight="50.0" prefWidth="100.0" styleClass="update" stylesheets="@../Css/Buttons.css" text="Update">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="delete" buttonType="RAISED" onAction="#deleteRaw" prefHeight="50.0" prefWidth="100.0" styleClass="delete" stylesheets="@../Css/Buttons.css" text="Delete">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children></AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/doc.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

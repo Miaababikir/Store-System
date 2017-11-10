@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Controller">
+    <children>
+        <AnchorPane layoutX="50.0" layoutY="75.0" prefHeight="250.0" prefWidth="500.0" style="-fx-background-color: #cfd8dc; -fx-background-radius: 50;" styleClass="hBox" stylesheets="@../Css/Buttons.css">
+            <children>
+                <Text fill="#2f3132" layoutX="209.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+                    <font>
+                        <Font name="Felix Titling" size="26.0" />
+                    </font>
+                </Text>
+            <VBox alignment="TOP_CENTER" layoutX="13.0" layoutY="52.0" prefHeight="173.0" prefWidth="469.0">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="#263238" labelFloat="true" maxWidth="300.0" minWidth="240.0" prefHeight="31.0" prefWidth="300.0" promptText="Username" unFocusColor="#0d3910">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#263238" maxWidth="289.0" minWidth="300.0" prefHeight="31.0" prefWidth="289.0" promptText="Password" unFocusColor="#0d3910" />
+                  <HBox alignment="CENTER" prefHeight="68.0" prefWidth="469.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#checkLogin" prefHeight="41.0" prefWidth="104.0" styleClass="btn" stylesheets="@../Css/Buttons.css" text="Login" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="cancel" buttonType="RAISED" onAction="#cancel" prefHeight="45.0" prefWidth="104.0" styleClass="btn" stylesheets="@../Css/Buttons.css" text="Cancel" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

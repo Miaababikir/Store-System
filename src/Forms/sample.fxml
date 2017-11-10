@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane layoutX="50.0" layoutY="75.0" prefHeight="250.0" prefWidth="500.0" style="-fx-background-color: #cfd8dc; -fx-background-radius: 50;" styleClass="hBox" stylesheets="@../Css/Buttons.css">
+            <children>
+                <HBox alignment="CENTER" layoutX="17.0" layoutY="52.0" prefHeight="147.0" prefWidth="470.0">
+                    <children>
+                        <JFXButton fx:id="settings" buttonType="RAISED" contentDisplay="TOP" prefHeight="100.0" prefWidth="100.0" stylesheets="@../Css/Buttons.css" text="Settings" textFill="#cfd8dc">
+                            <styleClass>
+                                <String fx:value="btn" />
+                                <String fx:value="login" />
+                            </styleClass>
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/settings.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Felix Titling" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="login" buttonType="RAISED" contentDisplay="TOP" prefHeight="100.0" prefWidth="100.0" stylesheets="@../Css/Buttons.css" text="Login" textFill="#cfd8dc">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/Login.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <styleClass>
+                                <String fx:value="btn" />
+                                <String fx:value="login" />
+                            </styleClass>
+                            <font>
+                                <Font name="Felix Titling" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="checkDB" contentDisplay="TOP" prefHeight="100.0" prefWidth="100.0" styleClass="btn" stylesheets="@../Css/Buttons.css" text="Check DB" textFill="#cfd8dc">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/stack.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Felix Titling" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <Text fill="#2f3132" layoutX="98.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invetory Mangement">
+                    <font>
+                        <Font name="Felix Titling" size="26.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

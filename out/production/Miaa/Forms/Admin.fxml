@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="771.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="499.0" prefWidth="180.0" style="-fx-background-color: black;">
+         <children>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" prefHeight="100.0" prefWidth="180.0" text="Add Material" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/box.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="180.0" text="Add Category" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/list.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="180.0" text="Add Brand" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/pad2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="180.0" text="Add Supplier" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/maleuser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="180.0" text="Back" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="231.0" layoutY="94.0" prefHeight="312.0" prefWidth="484.0" style="-fx-background-color: black; -fx-background-radius: 50;">
+         <children>
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="78.0" layoutY="69.0" maxWidth="390.0" minWidth="259.0" prefHeight="31.0" prefWidth="328.0" promptText="ID" style="-fx-background-color: #e0e0e0;" unFocusColor="BLACK" />
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="78.0" layoutY="141.0" maxWidth="390.0" minWidth="259.0" prefHeight="31.0" prefWidth="328.0" promptText="Material" style="-fx-background-color: #e0e0e0;" unFocusColor="BLACK" />
+            <JFXButton layoutX="93.0" layoutY="212.0" prefHeight="44.0" prefWidth="122.0" style="-fx-background-color: #e0e0e0;" text="Cancel" />
+            <JFXButton layoutX="273.0" layoutY="212.0" prefHeight="44.0" prefWidth="122.0" style="-fx-background-color: #e0e0e0;" text="Add" />
+         </children>
+      </Pane>
+      <Text layoutX="405.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Material" textAlignment="CENTER" wrappingWidth="135.47265625">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
